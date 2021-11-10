@@ -1,0 +1,1230 @@
+{
+	"info": {
+		"_postman_id": "6393ad48-427c-44ed-a6d0-3f01989c78d5",
+		"name": "Prisão API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Usuário JUIZ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeUsuario\":\"Lulay\",\r\n    \"senha\":\"Gft2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - Usuário ADVOGADO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomeUsuario\":\"Bolsoy\",\r\n    \"senha\":\"Gft2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Delegacia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMTk4NzE2fQ.t7zfkDwtUmal_SoIpJ06TaRZg4BNU6Ukj6zo7mfawvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/delegacia",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegacia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Delegacia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMTk4NzE2fQ.t7zfkDwtUmal_SoIpJ06TaRZg4BNU6Ukj6zo7mfawvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"telefone\":\"(92) 3714-2678\",\r\n    \"batalhao\":\"Primeiro batalhao\",\r\n    \"enderecoDelegacia\":{\r\n       \"cep\":\"79003-109\",\r\n        \"rua\":\"Rua Sofia Melke\",\r\n        \"numero\":\"36\",\r\n        \"complemento\":\"\",\r\n        \"municipio\":\"Itanhangá Park\",\r\n        \"estado\":\"MS\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delegacia",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegacia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Delegacia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMTk4NzE2fQ.t7zfkDwtUmal_SoIpJ06TaRZg4BNU6Ukj6zo7mfawvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/delegacia/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegacia",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Delegacia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMTk4NzE2fQ.t7zfkDwtUmal_SoIpJ06TaRZg4BNU6Ukj6zo7mfawvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 4,\r\n    \"enderecoDelegacia\": {\r\n        \"cep\": \"79003-109\",\r\n        \"rua\": \"Rua Sofia Melke\",\r\n        \"numero\": 36,\r\n        \"complemento\": \"\",\r\n        \"municipio\": \"Itanhangá Park\",\r\n        \"estado\": \"MS\"\r\n    },\r\n    \"telefone\": \"(92) 3714-2678\",\r\n    \"batalhao\": \"Segundo batalhao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delegacia/4",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegacia",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Delegado",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjkwOTE4fQ.B306Qx1-w8q200cSh3vuISpP8xHrwDoAenYndPjAacY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/delegado",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Delegado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Roberto Robertson\",\r\n    \"delegacia\":{\r\n        \"id\":3\r\n    },\r\n    \"funcional\":\"1A2B3C\",\r\n    \"turno\":\"DIURNO\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delegado",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegado"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Delegado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMTk4NzE2fQ.t7zfkDwtUmal_SoIpJ06TaRZg4BNU6Ukj6zo7mfawvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/delegado/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegado",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Delegado",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjkwOTE4fQ.B306Qx1-w8q200cSh3vuISpP8xHrwDoAenYndPjAacY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 2,\r\n        \"nome\": \"Zoberto\",\r\n        \"delegacia\": {\r\n            \"id\": 3,\r\n            \"enderecoDelegacia\": {\r\n                \"cep\": \"79003-109\",\r\n                \"rua\": \"Rua Sofia Melke\",\r\n                \"numero\": 36,\r\n                \"complemento\": \"\",\r\n                \"municipio\": \"Itanhangá Park\",\r\n                \"estado\": \"MS\"\r\n            },\r\n            \"telefone\": \"(92) 3714-2678\",\r\n            \"batalhao\": \"Primeiro batalhao\"\r\n        },\r\n        \"funcional\": \"1A2B3C\",\r\n        \"turno\": \"NOTURNO\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/delegado/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegado",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Delegado Crescente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjgyNDQxfQ.SP3Bgbph4wrsr36IGzcvH_Ooh4nby5UWXKarb9dn9jE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/delegado/asc?sortBy=nome",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegado",
+						"asc"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "nome"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Delegado Decrescente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjkwOTE4fQ.B306Qx1-w8q200cSh3vuISpP8xHrwDoAenYndPjAacY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/delegado/desc?sortBy=nome",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"delegado",
+						"desc"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "nome"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Policial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjkzMjA4fQ.fWvztwTS3EHsX2v53MoDRpV-E0zav6wr1OG1VoqcPSo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/policial",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Policial Nome",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjkzMzIxfQ.y7jzADjC59jeHvnrF45GaGN-ngC72_PqzGbK20Ig06o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/policial/nome/Bruno",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policial",
+						"nome",
+						"Bruno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Policial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwMDg0fQ._1sAcoEnDMs9i9SlWu4cB_NFHqb1spRYvB1OZYqkonM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Policial Policielson\",\r\n    \"funcional\":\"AABBCC34\",\r\n    \"patente\":\"Coronel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/policial",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Policial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwMDg0fQ._1sAcoEnDMs9i9SlWu4cB_NFHqb1spRYvB1OZYqkonM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/policial/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policial",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Policial",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwMDg0fQ._1sAcoEnDMs9i9SlWu4cB_NFHqb1spRYvB1OZYqkonM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Policial Policielson\",\r\n    \"patente\": \"Capitão\",\r\n    \"funcional\": \"AABBCC34\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/policial/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"policial",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Criminoso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/criminoso",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"criminoso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Criminoso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Criminoso do crime\",\r\n    \"cpf\":\"031.002.644-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/criminoso",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"criminoso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Criminoso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/criminoso/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"criminoso",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Criminoso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Criminoso do crime muito maligno\",\r\n    \"cpf\": \"031.002.644-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/criminoso/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"criminoso",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Vitima",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vitima",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vitima"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Vitima",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Vitima vitimista\",\r\n    \"cpf\":\"809.020.141-53\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vitima",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vitima"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Vitima",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/vitima/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vitima",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Vitima",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAwNjY3fQ.d2QAr6Kej0QiJLBorECE6dWDJEP9N9RyhfeL48NxC0k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Vitima Vitimista Triste\",\r\n    \"cpf\": \"809.020.141-53\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/vitima/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vitima",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Legista",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIyIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMjI4fQ.HFOvy4CrBgek5XlwM7Cy5Y78GbhATTdQ2UaWDyowXvk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/legista",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"legista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Legista",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\":\"Legista Leitor\",\r\n    \"crm\":\"382.962.737.563\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/legista",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"legista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Legista",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/legista/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"legista",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Legista",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"nome\": \"Legista Leitor Junior\",\r\n    \"crm\": \"382.962.737.563\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/legista/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"legista",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Prisão",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/prisao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prisao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Prisão",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"policial\":{\r\n        \"id\":2\r\n    },\r\n    \"criminoso\":{\r\n        \"id\":2\r\n    },\r\n    \"vitima\":{\r\n        \"id\":2\r\n    },\r\n    \"data\":\"2020-12-27\",\r\n    \"delegacia\":{\r\n        \"id\":3\r\n    },\r\n    \"delegado\":{\r\n        \"id\":3\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/prisao/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"prisao",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Autopsia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/autopsia",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autopsia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Autopsia",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"vitima\": {\r\n            \"id\": 2,\r\n            \"nome\": \"Vitima Vitimista Triste\",\r\n            \"cpf\": \"809.020.141-53\"\r\n        },\r\n        \"legista\": {\r\n            \"id\": 2,\r\n            \"nome\": \"Legista Leitor Junior\",\r\n            \"crm\": \"382.962.737.563\"\r\n        },\r\n        \"dataAutopsia\": \"2021-09-08\",\r\n        \"laudo\": \"Atropelamento\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/autopsia/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autopsia",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Crime",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/crime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Crime",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"criminoso\":{\r\n        \"id\":2\r\n    },\r\n    \"vitima\":{\r\n        \"id\":2\r\n    },\r\n    \"dataCrime\":\"2021-09-07\",\r\n    \"descricao\":\"Furto de bolinha de gude\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/crime",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crime"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Crime",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/crime/{id}",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crime",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Crime",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiaXNzIjoiUHJvZ3JhbWFTVEFSVEVSIiwiZXhwIjoxNjMxMjAxMzE3fQ.zrdNDGj2iBmneOkYGcepqF_NDhoY9MTqjltTIijGOt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"criminoso\": {\r\n        \"id\": 2,\r\n        \"nome\": null,\r\n        \"cpf\": null\r\n    },\r\n    \"vitima\": {\r\n        \"id\": 2,\r\n        \"nome\": null,\r\n        \"cpf\": null\r\n    },\r\n    \"dataCrime\": \"2021-09-07\",\r\n    \"descricao\": \"Furto de pão com ovo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/crime/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"crime",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
